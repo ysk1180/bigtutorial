@@ -13,7 +13,7 @@ module ApplicationHelper
       twitter_card[:url] = 'https://bigtutorial.herokuapp.com/'
       twitter_card[:image] = "https://raw.githubusercontent.com/ysk1180/bigtutorial/master/app/assets/images/top.png"
     end
-    twitter_card[:title] = "Big Tutorial"
+    twitter_card[:title] = "BigTutorial"
     twitter_card[:card] = 'summary_large_image'
     twitter_card[:description] = 'BigTweetのチュートリアル作成しました！'
     twitter_card
