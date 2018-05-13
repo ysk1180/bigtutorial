@@ -23,8 +23,12 @@ class PostsController < ApplicationController
   def create
     # ⑤-1 @postに入力したcontent、kindが入っています。（id、pictureはまだ入っていません）
     @post = Post.new(post_params)
-    # ⑤-2 idとして採番予定の数字を作成（現在作成しているidの次）
-    next_id = Post.last.id + 1
+    # ⑤-2 idとして採番予定の数字を作成（現在作成しているidの次、存在しない場合は1を採番）
+    if Post.last.present?
+      next_id = Post.last.id + 1
+    else
+      next_id = 1
+    end
     # ⑤-3 画像の生成メソッド呼び出し（画像のファイル名にidを使うため、引数として渡す）
     make_picture(next_id)
     if @post.save
