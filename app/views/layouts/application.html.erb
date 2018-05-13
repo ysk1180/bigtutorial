@@ -7,9 +7,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- 追記① モバイル端末表示対応 -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- 追記③ Twitterカード設定 -->
+    <% twitter_card = get_twitter_card_info(@post ? @post : nil) %>
+    <meta name="twitter:card" content=<%=twitter_card[:card]%> />
+    <meta property="og:url" content=<%=twitter_card[:url]%> />
+    <meta property="og:title" content=<%=twitter_card[:title]%> />
+    <meta property="og:description" content=<%=twitter_card[:description]%> />
+    <meta property="og:image" content=<%=twitter_card[:image]%> />
   </head>
 
   <body>
-    <%= yield %>
+    <!-- 追記② 余白作成 -->
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

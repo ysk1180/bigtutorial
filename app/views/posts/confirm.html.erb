@@ -1,0 +1,15 @@
+<h2>生成された画像の確認</h2>
+<div>
+  <!-- ①確認画像の表示 -->
+  <%= image_tag @post.picture, width: '315' %>
+</div>
+
+<h2>Step 3</h2>
+<!-- ②Twitter投稿へのリンク。「url」以下がurl、「hashtags」以下がハッシュタグ -->
+<a href="https://twitter.com/share?url=https://bigtutorial.herokuapp.com/posts/<%= @post.id %>&hashtags=bigtutorial" target="_blank" class="square_btn" data-show-count="false">Twitter投稿へ</a>
+<div>
+  <%= link_to "画像編集へ戻る", edit_post_path(@post) %>
+</div>
+<div>
+  <%= link_to "トップページへ", root_path %>
+</div>

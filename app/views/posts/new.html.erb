@@ -1,5 +1,11 @@
-<h1>New Post</h1>
+<div>
+  <%= image_tag 'top.png', width: '315' %>
+</div>
+
+<div>
+  <p>文字が入った画像を自動生成して、気軽に力強いツイートができるサービスです</p>
+  <p><u>簡単3StepでTwitter投稿！</u></p>
+  <p>生成される画像を確認してからツイートするか決められます！まずは画像作成してみてください^^</p>
+</div>
 
 <%= render 'form', post: @post %>
-
-<%= link_to 'Back', posts_path %>

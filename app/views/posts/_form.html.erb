@@ -1,3 +1,5 @@
+<h2>Step 1</h2>
+
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +13,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="form-group">
+    <p>背景画像選択</p>
+    <label><%= form.radio_button :kind, "black" %><%= image_tag 'black.jpg', width: '100' %></label>
+    <label><%= form.radio_button :kind, "red" %><%= image_tag 'red.jpg', width: '100' %></label>
   </div>
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.text_field :picture %>
+  <div>
+    <h2>Step 2</h2>
   </div>
 
-  <div class="field">
-    <%= form.label :kind %>
-    <%= form.text_field :kind %>
+  <div class="form-group">
+    <p>画像内の文字入力</p>
+    <%= form.text_area :content, class:'form-control', rows:"3" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "画像を確認する（まだツイートされません）", id: 'submit', class:"square_btn" %>
   </div>
 <% end %>

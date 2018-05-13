@@ -47,5 +47,6 @@ gem 'fog'
 source 'https://rubygems.org'
 ruby '2.5.1'
 
-# ⑤日本語化
-gem 'rails-i18n'
+# ⑥Bootstrap
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'jquery-rails'
