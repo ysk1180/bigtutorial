@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 説明
+このリポジトリはBigTweetを簡単に作れる技術チュートリアル用のリポジトリです。  
 
-Things you may want to cover:
+## 技術チュートリアル
+【Big Tweetチュートリアル】Ruby on Railsで簡単なサービスを作ってみよう！（初学者向け）  
+https://note.mu/ysk1180/n/n551cafc1f8e1
 
-* Ruby version
+## BigTweetとは
+文字が入った画像を自動生成して、気軽に力強いツイートができるサービス  
+https://bigtweet.herokuapp.com/
 
-* System dependencies
+## バージョン
+Ruby：2.5.1  
+Rails：5.2.0  
+PostgreSQL：10.1
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 作者
+@ysk1180
